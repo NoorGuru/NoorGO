@@ -8,7 +8,7 @@ const getLongUrl = (shortUrl) => redirections[shortUrl] || "https://www.noor.gur
 
 const redirect = () => {
     const currentPage = window.location.href;
-    const shortUrl = currentPage?.split("/").pop() || "";
+    const shortUrl = currentPage?.split("/")?.pop()?.split("?")?.shift() || "";
     window.location.replace(getLongUrl(shortUrl));
 }
 
