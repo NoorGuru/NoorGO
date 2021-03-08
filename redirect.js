@@ -10,6 +10,7 @@ const redirections = {
     "youtube-cwn": "https://www.youtube.com/c/CodewithNoor/",
     "youtube": "https://www.youtube.com/c/MohammadNoorAbuKhleif",
     "ig": "https://www.instagram.com/mohnoor94/",
+    "sof": "https://stackoverflow.com/users/2847543/mohammad-noor",
 };
 
 const getLongUrl = (shortUrl) => redirections[shortUrl] || "https://www.noor.guru/";
