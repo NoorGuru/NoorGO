@@ -7,8 +7,8 @@ const redirections = {
     "linkedin": "https://www.linkedin.com/in/mohnoor94/",
     "github": "https://github.com/mohnoor94",
     "email": "mailto:moh.noor94@gmail.com",
-    "youtube-cwn": "https://www.youtube.com/c/CodewithNoor/",
-    "youtube": "https://www.youtube.com/c/MohammadNoorAbuKhleif",
+    "youtube": "https://www.youtube.com/c/CodewithNoor/",
+    "youtube-main": "https://www.youtube.com/c/MohammadNoorAbuKhleif",
     "ig": "https://www.instagram.com/mohnoor94/",
     "sof": "https://stackoverflow.com/users/2847543/mohammad-noor",
 };
