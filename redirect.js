@@ -24,6 +24,13 @@ const redirections = {
     "cpp-fls": "https://1drv.ms/b/s!AnR5_MGIlB3e70iHhYr8aGXhtPuC",
     "cpp-flq": "https://1drv.ms/b/s!AnR5_MGIlB3e70W4gP1sjOm4iea2",
     "cpp-ex": "https://www.abukhleif.com/category/c/cppexercises/",
+
+    // C++ Quizzes
+    "cpp-qft1": "https://www.abukhleif.com/quiz1/",
+    "cpp-qft2": "https://www.abukhleif.com/quiz2/",
+    "cpp-qft4": "https://www.abukhleif.com/quiz4/",
+    "cpp-eft1": "https://www.abukhleif.com/first-exam1/",
+    "cpp-eft2": "https://www.abukhleif.com/first-exam2/",
 };
 
 const getLongUrl = (shortUrl) => redirections[shortUrl] || "https://www.noor.guru/";
