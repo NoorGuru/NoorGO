@@ -17,7 +17,7 @@ const redirections = {
     "cpp-ftq1": "https://1drv.ms/b/s!AnR5_MGIlB3e72ki6llgN-pEmQ5Z",
     "cpp-ftq2": "https://www.abukhleif.com/first-exam-important-questions/",
     "cpp-sds1": "https://1drv.ms/b/s!AnR5_MGIlB3e72Soidf48IJz93eA",
-    "cpp-sds2": "https://1drv.ms/b/s!AnR5_MGIlB3e72Soidf48IJz93eA",
+    "cpp-sds2": "https://1drv.ms/b/s!AnR5_MGIlB3e72NVQyjQfq1ysj_8",
     "cpp-sdq1": "https://1drv.ms/b/s!AnR5_MGIlB3e70lVF0ECLRIpd8tm",
     "cpp-sdq2": "https://www.abukhleif.com/cpp-second-exam-write-function-past-papers/",
     "cpp-sdq3": "https://www.abukhleif.com/pattern-programs/",
