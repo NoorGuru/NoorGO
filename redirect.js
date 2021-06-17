@@ -11,6 +11,7 @@ const redirections = {
     "youtube-main": "https://www.youtube.com/c/MohammadNoorAbuKhleif",
     "ig": "https://www.instagram.com/mohnoor94/",
     "sof": "https://stackoverflow.com/users/2847543/mohammad-noor",
+    "hr": "https://www.hackerrank.com/moh_noor94",
 
     // C++ Files
     "cpp-fts": "https://1drv.ms/b/s!AnR5_MGIlB3e72UGY6djrr2v5uXy",
