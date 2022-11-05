@@ -13,7 +13,9 @@ const redirections = {
     "sof": "https://stackoverflow.com/users/2847543/mohammad-noor",
     "hr": "https://www.hackerrank.com/moh_noor94",
     "interview": "https://present.noor.guru/tech-interview",
-
+    "tech-job": "https://present.noor.guru/tech-job/",
+    
+    
     // C++ Files
     "cpp-fts": "https://1drv.ms/b/s!AnR5_MGIlB3e72UGY6djrr2v5uXy",
     "cpp-ftq1": "https://1drv.ms/b/s!AnR5_MGIlB3e72ki6llgN-pEmQ5Z",
@@ -27,6 +29,7 @@ const redirections = {
     "cpp-flq": "https://1drv.ms/b/s!AnR5_MGIlB3e70W4gP1sjOm4iea2",
     "cpp-ex": "https://www.abukhleif.com/category/c/cppexercises/",
 
+    
     // C++ Quizzes
     "cpp-qft1": "https://www.abukhleif.com/quiz1/",
     "cpp-qft2": "https://www.abukhleif.com/quiz2/",
