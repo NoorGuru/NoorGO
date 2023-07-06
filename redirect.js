@@ -3,6 +3,7 @@ const redirections = {
     "apps": "https://play.google.com/store/apps/dev?id=6213463466804826025",
     "cv": "https://drive.google.com/file/d/0B2215F1Cj2_0ZF9FVFlpNXhSUmM/view",
     "twitter": "https://twitter.com/mohnoor94",
+    "threads": "https://threads.net/mohnoor94"
     "fb": "https://web.facebook.com/moh.noor94",
     "linkedin": "https://www.linkedin.com/in/mohnoor94/",
     "github": "https://github.com/mohnoor94",
