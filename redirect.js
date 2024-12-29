@@ -39,7 +39,7 @@ const redirections = {
     "cpp-eft2": "https://www.abukhleif.com/first-exam2/",
 };
 
-const getLongUrl = (shortUrl) => redirections[shortUrl] || "https://www.noor.guru/";
+const getLongUrl = (shortUrl) => redirections[shortUrl] || "https://www.noor.sh/";
 
 const redirect = () => {
     const currentPage = window.location.href;
