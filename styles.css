@@ -372,6 +372,10 @@ a {
   transition: transform 110ms var(--ease-out), background-color 150ms ease;
 }
 
+.hero-card .hero-cta {
+  margin-top: 0.95rem;
+}
+
 .hero-cta:active {
   transform: scale(0.985);
   background: var(--paper-warm);
@@ -416,6 +420,20 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
   margin-top: 0.55rem;
+}
+
+.hero-strip--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-strip--single .hero-strip__btn {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-strip--single .hero-strip__sub {
+  margin-top: 0;
 }
 
 .hero-strip__btn {
