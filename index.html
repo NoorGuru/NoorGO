@@ -1,11 +1,780 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>bynoor.io | GO</title>
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f3ea" />
 
-<script src="redirect.js"></script>
+  <title>Mohammad Noor · go.bynoor.io</title>
+  <meta name="description" content="Everything important by Mohammad Noor Abu Khlaif — talks, live AI builds (Aura, Nebula, Present, Void), Arabic coding courses, speaking inquiries, portfolio, and booking." />
+  <meta name="author" content="Mohammad Noor Abu Khlaif" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://go.bynoor.io/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="go.bynoor.io" />
+  <meta property="og:title" content="Mohammad Noor · Everything Important (go.bynoor.io)" />
+  <meta property="og:description" content="SDE III at Expedia Group (ex-Amazon). Featured talks, live AI platforms, Arabic CS courses, speaking workshops, portfolio &amp; booking." />
+  <meta property="og:url" content="https://go.bynoor.io/" />
+  <meta property="og:image" content="https://go.bynoor.io/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Mohammad Noor Abu Khlaif — Software Engineer &amp; AI Advocate" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohammad Noor · go.bynoor.io" />
+  <meta name="twitter:description" content="Official link directory for Mohammad Noor Abu Khlaif — talks, live AI builds, courses, speaking, and booking." />
+  <meta name="twitter:image" content="https://go.bynoor.io/assets/images/og-image.png" />
+
+  <!-- Icons & Manifest -->
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Preload critical fonts & portrait -->
+  <link rel="preload" as="font" href="/assets/fonts/fraunces-normal.woff2" type="font/woff2" crossorigin />
+  <link rel="preload" as="font" href="/assets/fonts/dm-sans-variable.woff2" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="/assets/images/profile-pic.webp" type="image/webp" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://go.bynoor.io/",
+    "name": "Mohammad Noor · go.bynoor.io",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://bynoor.io/#person",
+      "name": "Mohammad Noor Abu Khlaif",
+      "alternateName": ["Noor Abu Khlaif", "Code with Noor", "mohnoor94"],
+      "url": "https://bynoor.io/",
+      "image": "https://go.bynoor.io/assets/images/profile-pic.webp",
+      "jobTitle": "Software Development Engineer III",
+      "worksFor": { "@type": "Organization", "name": "Expedia Group" },
+      "sameAs": [
+        "https://bynoor.io/",
+        "https://present.bynoor.io/",
+        "https://www.linkedin.com/in/mohnoor94",
+        "https://github.com/mohnoor94",
+        "https://github.com/NoorGuru",
+        "https://github.com/GoBanana-io",
+        "https://www.youtube.com/c/CodeWithNoor",
+        "https://www.instagram.com/bynoor.io",
+        "https://x.com/mohnoor94",
+        "https://stackoverflow.com/users/2847543/mohammad-noor"
+      ]
+    }
+  }
+  </script>
+
+  <!-- Google Analytics (lazy, non-blocking) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XHXB3G7XDR');
+    (()=>{let l=()=>{if(l.d)return;l.d=1;let s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-XHXB3G7XDR';document.head.appendChild(s)};['pointerdown','keydown','scroll','touchstart'].forEach(e=>addEventListener(e,l,{passive:true,once:true}));'requestIdleCallback'in window?requestIdleCallback(l,{timeout:3000}):setTimeout(l,3000)})();
+  </script>
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="page">
+  <a href="#directory" class="skip-link">Skip to links</a>
+
+  <div class="dossier">
+    <!-- Compact Top Utility Bar -->
+    <header class="topbar">
+      <a href="https://bynoor.io/" target="_blank" rel="noopener" class="wordmark" aria-label="go.bynoor.io — visit full website bynoor.io">
+        <span class="wordmark__go">go.</span><span class="wordmark__base">bynoor.io</span>
+      </a>
+
+      <div class="topbar__right">
+        <div class="clock-pill" aria-label="Local time in Amman, Jordan">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Amman</span>
+          <span class="clock-pill__sep" aria-hidden="true">·</span>
+          <time id="amman-time" class="clock-pill__time">--:--</time>
+        </div>
+
+        <button type="button" class="icon-btn" id="open-share-btn" aria-label="Share link or show QR code">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+            <path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20h1"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="directory" class="main">
+      <!-- Compact Deep Pine Identity Masthead -->
+      <section class="hero-card hero-card--compact" aria-label="Introduction">
+        <div class="hero-card__identity">
+          <div class="hero-card__avatar-wrap">
+            <picture>
+              <source srcset="/assets/images/profile-pic.webp" type="image/webp" />
+              <img
+                src="/assets/images/profile-pic.png"
+                alt="Mohammad Noor Abu Khlaif"
+                width="144"
+                height="144"
+                fetchpriority="high"
+                decoding="async"
+                class="hero-card__avatar"
+              />
+            </picture>
+            <span class="hero-card__presence" title="Open to select roles &amp; advisory" aria-hidden="true"></span>
+          </div>
+
+          <div class="hero-card__bio">
+            <h1 class="hero-card__name">Mohammad Noor</h1>
+            <p class="hero-card__role">SDE III, Expedia Group · ex-Amazon</p>
+            <p class="hero-card__line">Building AI-native developer platforms &amp; teaching code since 2013.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Audience Filter Rail -->
+      <nav class="filter-bar" aria-label="Filter links by focus">
+        <div class="filter-tabs" role="tablist" aria-label="Directory categories">
+          <span class="filter-tabs__indicator" aria-hidden="true"></span>
+          <button type="button" role="tab" aria-selected="true" class="filter-tab is-active" data-filter="all">All</button>
+          <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="learn">Learn</button>
+          <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="builds">Builds</button>
+          <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="work">Work</button>
+        </div>
+      </nav>
+
+      <!-- Section 1: Latest Talk on Top -->
+      <section class="dir-section" data-section="talks" aria-labelledby="sec-talks">
+        <div class="dir-section__head">
+          <h2 id="sec-talks" class="dir-section__title">Latest talk</h2>
+          <a href="https://present.bynoor.io/" target="_blank" rel="noopener" class="dir-section__more">All talks ↗</a>
+        </div>
+
+        <div class="stack">
+          <a
+            href="https://present.bynoor.io/ai-swe-2026/"
+            target="_blank"
+            rel="noopener"
+            class="card card--talk-featured"
+            data-groups="learn work"
+          >
+            <div class="card__top">
+              <span class="pill pill--brass">Latest deck · Amman 2026</span>
+              <span class="card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3 class="card__title">The AI-Augmented Software Engineer</h3>
+            <p class="card__desc">
+              Beyond code generation — how to stay valuable when writing code becomes free.
+            </p>
+            <div class="card__foot">
+              <span class="card__host">present.bynoor.io/ai-swe-2026</span>
+              <span class="card__stat">Interactive slides</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 2: Built by Noor (All Full-Wide Cards, including Present & Void) -->
+      <section class="dir-section" data-section="builds" aria-labelledby="sec-builds">
+        <div class="dir-section__head">
+          <h2 id="sec-builds" class="dir-section__title">Built by Noor</h2>
+          <span class="dir-section__note">Live products &amp; experiences</span>
+        </div>
+
+        <div class="bento">
+          <a
+            href="https://aura.bynoor.io"
+            target="_blank"
+            rel="noopener"
+            class="card card--showcase"
+            data-groups="builds"
+          >
+            <div class="card__thumb">
+              <img
+                src="/assets/images/aura-preview.webp"
+                alt="Aura — AI Financial Intelligence platform preview"
+                width="1200"
+                height="1333"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="live-chip">
+                <span class="live-chip__dot" aria-hidden="true"></span>
+                Live
+              </span>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <span class="pill pill--neutral">AI Financial Intelligence</span>
+                <span class="card__arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3 class="card__title">Aura</h3>
+              <p class="card__desc">Every stock analyst, one clear signal. 1,400+ conviction signals tracked across 50+ channels.</p>
+              <span class="card__host">aura.bynoor.io</span>
+            </div>
+          </a>
+
+          <a
+            href="https://nebula.bynoor.io"
+            target="_blank"
+            rel="noopener"
+            class="card card--showcase"
+            data-groups="builds learn"
+          >
+            <div class="card__thumb">
+              <img
+                src="/assets/images/nebula-preview.webp"
+                alt="Nebula — Bilingual startup playbooks library preview"
+                width="1200"
+                height="1333"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="live-chip live-chip--bilingual" lang="ar">EN / بالعربية</span>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <span class="pill pill--neutral">Startup Playbooks</span>
+                <span class="card__arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3 class="card__title">Nebula</h3>
+              <p class="card__desc">320+ evidence-backed startup teardowns, unit economics, and failure lessons in English &amp; Arabic.</p>
+              <span class="card__host">nebula.bynoor.io</span>
+            </div>
+          </a>
+
+          <a
+            href="https://present.bynoor.io/"
+            target="_blank"
+            rel="noopener"
+            class="card card--showcase card--present"
+            data-groups="builds learn work"
+          >
+            <div class="card__thumb card__thumb--present" aria-hidden="true">
+              <div class="present-stage">
+                <span class="present-stage__kicker">present.bynoor.io</span>
+                <span class="present-stage__headline">4 Live Decks</span>
+                <span class="present-stage__sub">AI · Interviews · Java</span>
+              </div>
+              <span class="live-chip">Phone-ready</span>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <span class="pill pill--pine">Talks &amp; Decks</span>
+                <span class="card__arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3 class="card__title">Present</h3>
+              <p class="card__desc">Interactive slide decks with speaker notes and phone remote control on AI engineering, interviews, and Java.</p>
+              <span class="card__host">present.bynoor.io</span>
+            </div>
+          </a>
+
+          <a
+            href="https://void.bynoor.io"
+            target="_blank"
+            rel="noopener"
+            class="card card--showcase card--void-wide"
+            data-groups="builds"
+          >
+            <div class="card__thumb card__thumb--void" aria-hidden="true">
+              <svg class="void-orbit" viewBox="0 0 180 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="90" cy="70" r="56" stroke="rgba(244,241,234,0.14)" stroke-dasharray="3 4" />
+                <circle cx="90" cy="70" r="38" stroke="rgba(185,138,31,0.45)" />
+                <circle cx="90" cy="70" r="20" stroke="rgba(244,241,234,0.28)" />
+                <circle cx="90" cy="70" r="4.5" fill="#f7f3ea" />
+                <circle cx="128" cy="70" r="3" fill="#e6c675" />
+                <circle cx="51" cy="28" r="1.5" fill="#f7f3ea" opacity="0.7" />
+                <circle cx="146" cy="34" r="1.2" fill="#f7f3ea" opacity="0.6" />
+                <circle cx="34" cy="108" r="1.4" fill="#e6c675" opacity="0.75" />
+                <circle cx="142" cy="112" r="1.6" fill="#f7f3ea" opacity="0.55" />
+              </svg>
+              <span class="live-chip">Interactive</span>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <span class="pill pill--void">Experience</span>
+                <span class="card__arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3 class="card__title">Void</h3>
+              <p class="card__desc">Cosmic zoom from self to the edge of everything. An interactive scale journey across the observable universe.</p>
+              <span class="card__host">void.bynoor.io</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 3: Learn with me -->
+      <section class="dir-section" data-section="learn" aria-labelledby="sec-learn">
+        <div class="dir-section__head">
+          <h2 id="sec-learn" class="dir-section__title">Learn with me</h2>
+          <span class="dir-section__ar" lang="ar">بالعربية</span>
+        </div>
+
+        <div class="stack">
+          <a
+            href="https://bynoor.io/technical-interview-preparation-kit/"
+            target="_blank"
+            rel="noopener"
+            class="card card--kit"
+            data-groups="learn work"
+          >
+            <div class="card__top">
+              <span class="pill pill--brass">Free guide</span>
+              <span class="card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3 class="card__title">Technical Interview Preparation Kit</h3>
+            <p class="card__desc">
+              Personal cheat sheets on data structures, sorting &amp; searching, Big O, bit manipulation, and SOLID design.
+            </p>
+            <div class="card__foot">
+              <span class="card__host">bynoor.io/technical-interview-preparation-kit</span>
+            </div>
+          </a>
+
+          <a
+            href="https://www.youtube.com/c/CodeWithNoor"
+            target="_blank"
+            rel="noopener"
+            class="card card--youtube"
+            data-groups="learn"
+          >
+            <div class="yt-row">
+              <div class="yt-badge" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </div>
+              <div class="yt-row__body">
+                <h3 class="card__title">Code with Noor on YouTube</h3>
+                <p class="card__desc">18.7K subscribers · 760K+ views · Teaching CS since 2013</p>
+              </div>
+              <span class="card__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <div class="grid-2">
+            <a
+              href="https://www.youtube.com/playlist?list=PLaOfjyVFnPmW1sycl5qH3PH_vymkguOq8"
+              target="_blank"
+              rel="noopener"
+              class="card card--course"
+              data-groups="learn"
+            >
+              <div class="course-thumb">
+                <img
+                  src="/assets/images/teach-python.jpg"
+                  alt="Complete Python Masterclass in Arabic"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="course-thumb__badge">70 videos</span>
+              </div>
+              <div class="course-body">
+                <h3 class="course-title">Python Masterclass</h3>
+                <p class="course-ar" lang="ar" dir="rtl">كورس بايثون الشامل</p>
+              </div>
+            </a>
+
+            <a
+              href="https://www.youtube.com/playlist?list=PLaOfjyVFnPmXYSeCeSuitSai8FuM-IacQ"
+              target="_blank"
+              rel="noopener"
+              class="card card--course"
+              data-groups="learn"
+            >
+              <div class="course-thumb">
+                <img
+                  src="/assets/images/teach-cpp.jpg"
+                  alt="C++ for Beginners in Arabic"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="course-thumb__badge">Since 2013</span>
+              </div>
+              <div class="course-body">
+                <h3 class="course-title">C++ for Beginners</h3>
+                <p class="course-ar" lang="ar" dir="rtl">شرح سي بلس بلس للمبتدئين</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Speaking & AI Workshops -->
+      <section class="dir-section" data-section="speaking" aria-labelledby="sec-speaking">
+        <div class="dir-section__head">
+          <h2 id="sec-speaking" class="dir-section__title">Speaking &amp; workshops</h2>
+          <span class="dir-section__note">Expedia AI Champion</span>
+        </div>
+
+        <div class="card card--speaking" data-groups="work learn">
+          <div class="card__top">
+            <span class="pill pill--pine">Talks &amp; team training</span>
+          </div>
+          <h3 class="card__title">Invite me to speak or run an AI workshop</h3>
+          <p class="card__desc">
+            Trained hundreds of engineers on AI-assisted development, agentic workflows, and platform engineering. Reach out directly on:
+          </p>
+
+          <div class="speaking-channels">
+            <a
+              href="https://cal.com/mohammad-noor"
+              target="_blank"
+              rel="noopener"
+              class="channel-btn channel-btn--primary"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Book a call</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/mohnoor94"
+              target="_blank"
+              rel="noopener"
+              class="channel-btn"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a
+              href="mailto:moh.noor94@gmail.com?subject=Speaking%20%2F%20AI%20Workshop%20Inquiry%20via%20go.bynoor.io"
+              class="channel-btn"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <span>Email</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/bynoor.io"
+              target="_blank"
+              rel="noopener"
+              class="channel-btn"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Client launches -->
+      <section class="dir-section" data-section="clients" aria-labelledby="sec-clients">
+        <div class="dir-section__head">
+          <h2 id="sec-clients" class="dir-section__title">Client launches</h2>
+          <span class="dir-section__note">Brand → code → deploy</span>
+        </div>
+
+        <div class="grid-2">
+          <a
+            href="https://areej.io/"
+            target="_blank"
+            rel="noopener"
+            class="card card--client"
+            data-groups="work builds"
+          >
+            <div class="client-thumb">
+              <img
+                src="/assets/images/areej-preview.webp"
+                alt="areej.io editorial brand and consulting site"
+                width="1200"
+                height="750"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="client-body">
+              <div class="card__top">
+                <h3 class="course-title">areej.io</h3>
+                <span class="card__arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card__desc">Editorial brand &amp; consulting platform</p>
+            </div>
+          </a>
+
+          <a
+            href="https://mohnoor94.github.io/hire-found/"
+            target="_blank"
+            rel="noopener"
+            class="card card--client"
+            data-groups="work builds"
+          >
+            <div class="client-thumb">
+              <img
+                src="/assets/images/hirefound-preview.webp"
+                alt="HireFound career matchmaking site"
+                width="1200"
+                height="750"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="client-body">
+              <div class="card__top">
+                <h3 class="course-title">HireFound</h3>
+                <span class="card__arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card__desc">MENA career matchmaking brand</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 6: Connect & Code + One-Tap Save Contact (.vcf) -->
+      <section class="dir-section" data-section="connect" aria-labelledby="sec-connect">
+        <div class="dir-section__head">
+          <h2 id="sec-connect" class="dir-section__title">Connect &amp; code</h2>
+        </div>
+
+        <div class="connect-grid">
+          <a href="https://www.linkedin.com/in/mohnoor94" target="_blank" rel="noopener" class="connect-tile" data-groups="work">
+            <svg class="connect-tile__icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <div class="connect-tile__meta">
+              <span class="connect-tile__name">LinkedIn</span>
+              <span class="connect-tile__sub">Career &amp; AI posts</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/mohnoor94" target="_blank" rel="noopener" class="connect-tile" data-groups="builds work">
+            <svg class="connect-tile__icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+            <div class="connect-tile__meta">
+              <span class="connect-tile__name">GitHub</span>
+              <span class="connect-tile__sub">@mohnoor94</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/NoorGuru" target="_blank" rel="noopener" class="connect-tile" data-groups="builds">
+            <svg class="connect-tile__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2l2.6 6.2L21 10.8l-6.4 2.6L12 20l-2.6-6.6L3 10.8l6.4-2.6L12 2z"></path>
+            </svg>
+            <div class="connect-tile__meta">
+              <span class="connect-tile__name">NoorGuru</span>
+              <span class="connect-tile__sub">Product Lab</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/GoBanana-io" target="_blank" rel="noopener" class="connect-tile" data-groups="builds">
+            <svg class="connect-tile__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3M9 17h6M10 20h4"></path>
+              <circle cx="12" cy="12" r="4"></circle>
+            </svg>
+            <div class="connect-tile__meta">
+              <span class="connect-tile__name">GoBanana-io</span>
+              <span class="connect-tile__sub">AI Agent Tooling</span>
+            </div>
+          </a>
+
+          <a href="https://x.com/mohnoor94" target="_blank" rel="noopener" class="connect-tile" data-groups="work">
+            <svg class="connect-tile__icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <div class="connect-tile__meta">
+              <span class="connect-tile__name">X / Twitter</span>
+              <span class="connect-tile__sub">@mohnoor94</span>
+            </div>
+          </a>
+
+          <a href="https://stackoverflow.com/users/2847543/mohammad-noor" target="_blank" rel="noopener" class="connect-tile" data-groups="work learn">
+            <svg class="connect-tile__icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.2.44-2.092-10.473-2.2zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154z"/>
+            </svg>
+            <div class="connect-tile__meta">
+              <span class="connect-tile__name">StackOverflow</span>
+              <span class="connect-tile__sub">Java &amp; systems</span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/bynoor.io" target="_blank" rel="noopener" class="connect-tile" data-groups="learn">
+            <svg class="connect-tile__icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+            <div class="connect-tile__meta">
+              <span class="connect-tile__name">Instagram</span>
+              <span class="connect-tile__sub">@bynoor.io</span>
+            </div>
+          </a>
+
+          <div class="connect-tile connect-tile--email" data-groups="work">
+            <button
+              type="button"
+              class="connect-tile__copy-btn"
+              data-copy="moh.noor94@gmail.com"
+              data-toast="Email copied to clipboard"
+              aria-label="Copy moh.noor94@gmail.com"
+            >
+              <svg class="connect-tile__icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <span class="connect-tile__meta">
+                <span class="connect-tile__name">Email</span>
+                <span class="connect-tile__sub">Tap to copy</span>
+              </span>
+            </button>
+            <a href="mailto:moh.noor94@gmail.com" class="connect-tile__mail-link" aria-label="Open email app to write to moh.noor94@gmail.com" title="Open mail app">↗</a>
+          </div>
+        </div>
+
+        <a
+          href="/noor.vcf"
+          download="Mohammad-Noor.vcf"
+          class="vcard-strip"
+          data-groups="work builds learn"
+        >
+          <span class="vcard-strip__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="2.5"></rect>
+              <circle cx="9" cy="10.5" r="2"></circle>
+              <path d="M6.5 15.5c.6-1.4 1.6-2 2.5-2s1.9.6 2.5 2"></path>
+              <path d="M14.5 10h3.5M14.5 14h3.5"></path>
+            </svg>
+          </span>
+          <span class="vcard-strip__meta">
+            <span class="vcard-strip__title">Save contact card</span>
+            <span class="vcard-strip__sub">Add Mohammad Noor to your phone contacts (.vcf)</span>
+          </span>
+          <span class="vcard-strip__badge" aria-hidden="true">↓ .vcf</span>
+        </a>
+      </section>
+
+      <!-- Section 7 (LAST): Book a Conversation, Full Portfolio & Resume -->
+      <section class="dir-section dir-section--closing" data-section="closing-work" aria-labelledby="sec-work">
+        <div class="closing-card" data-groups="work">
+          <div class="closing-card__head">
+            <h2 id="sec-work" class="closing-card__title">Work with Noor</h2>
+            <p class="closing-card__desc">
+              Available for select Staff / Principal engineering roles, AI platform architecture, and advisory.
+            </p>
+          </div>
+
+          <a
+            href="https://cal.com/mohammad-noor"
+            target="_blank"
+            rel="noopener"
+            class="hero-cta"
+          >
+            <span class="hero-cta__text">
+              <span class="hero-cta__title">Book a conversation</span>
+              <span class="hero-cta__meta">30-min call · Direct with Noor</span>
+            </span>
+            <span class="hero-cta__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <div class="hero-strip">
+            <a href="https://bynoor.io/" target="_blank" rel="noopener" class="hero-strip__btn">
+              <span class="hero-strip__label">Full Portfolio</span>
+              <span class="hero-strip__sub">bynoor.io · Proof &amp; EG Wizard ↗</span>
+            </a>
+            <a
+              href="https://bynoor.io/mohammad-noor-abu-khlaif-software-engineer-resume.pdf"
+              target="_blank"
+              rel="noopener"
+              class="hero-strip__btn"
+            >
+              <span class="hero-strip__label">View Resume</span>
+              <span class="hero-strip__sub">PDF ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer & Short-Links Drawer -->
+    <footer class="footer">
+      <details class="shortlinks-drawer">
+        <summary class="shortlinks-drawer__summary">
+          <span class="shortlinks-drawer__title">
+            <span class="shortlinks-drawer__mono">go.bynoor.io/…</span>
+            <span class="shortlinks-drawer__hint">Quick short-link shortcuts</span>
+          </span>
+          <svg class="shortlinks-drawer__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </summary>
+        <ul class="shortlinks-list" id="shortlinks-list"></ul>
+      </details>
+
+      <div class="footer__colophon">
+        <p class="footer__arc">14 years building software · 13 years teaching it.</p>
+        <p class="footer__quote">"The best platform engineering is invisible."</p>
+        <p class="footer__meta">
+          <a href="https://bynoor.io/" target="_blank" rel="noopener">bynoor.io</a>
+          <span aria-hidden="true">·</span>
+          <span>Amman, Jordan</span>
+          <span aria-hidden="true">·</span>
+          <span>© <span id="year">2026</span></span>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Share / QR Sheet Dialog -->
+  <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title">
+    <div class="share-sheet">
+      <div class="share-sheet__head">
+        <div>
+          <p class="share-sheet__eyebrow">@bynoor.io</p>
+          <h2 id="share-title" class="share-sheet__title">Share go.bynoor.io</h2>
+        </div>
+        <button type="button" class="icon-btn" id="close-share-btn" aria-label="Close share sheet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="qr-frame">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" shape-rendering="crispEdges" class="qr-svg" role="img" aria-label="QR code for https://go.bynoor.io">
+          <path fill="#fffdf8" d="M0 0h27v27H0z"/>
+          <path stroke="#1b1712" d="M1 1.5h7m3 0h2m1 0h1m4 0h7M1 2.5h1m5 0h1m2 0h2m2 0h3m2 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h1m9 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h4m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m1 0h4m2 0h1m1 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h4m3 0h2m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m1 0h1m3 0h1m1 0h1M1 9.5h1m1 0h5m4 0h1m1 0h2m3 0h5M1 10.5h2m7 0h1m1 0h1m1 0h1m2 0h1m2 0h1m3 0h1M2 11.5h1m1 0h2m1 0h3m3 0h6m1 0h3m1 0h2M2 12.5h1m3 0h1m3 0h1m2 0h1m1 0h1m1 0h2m1 0h1m4 0h1M3 13.5h3m1 0h3m1 0h1m7 0h1m1 0h1m1 0h3M1 14.5h1m1 0h2m1 0h1m2 0h2m2 0h2m2 0h1m2 0h1m1 0h1m1 0h1M1 15.5h1m3 0h7m2 0h3m1 0h1m1 0h3m1 0h2M1 16.5h1m1 0h1m1 0h2m1 0h1m4 0h2m2 0h1m2 0h2m3 0h1M1 17.5h1m1 0h3m1 0h2m1 0h2m1 0h1m1 0h1m1 0h5m1 0h1M9 18.5h1m6 0h2m3 0h2M1 19.5h7m3 0h3m3 0h1m1 0h1m1 0h1m1 0h3M1 20.5h1m5 0h1m1 0h4m2 0h1m1 0h1m3 0h2m2 0h1M1 21.5h1m1 0h3m1 0h1m1 0h1m2 0h1m3 0h6m1 0h3M1 22.5h1m1 0h3m1 0h1m1 0h1m3 0h3m2 0h2m1 0h5M1 23.5h1m1 0h3m1 0h1m1 0h3m2 0h4m4 0h2m1 0h1M1 24.5h1m5 0h1m3 0h1m1 0h2m2 0h1m1 0h4m2 0h1M1 25.5h7m1 0h2m2 0h1m1 0h1m4 0h6"/>
+        </svg>
+        <p class="qr-frame__url">https://go.bynoor.io</p>
+      </div>
+
+      <div class="share-sheet__actions">
+        <button type="button" class="btn btn--pine" data-copy="https://go.bynoor.io" data-toast="Copied https://go.bynoor.io">
+          Copy go.bynoor.io
+        </button>
+        <button type="button" class="btn btn--paper" id="native-share-btn" hidden>
+          Share via…
+        </button>
+      </div>
+
+      <a href="/noor.vcf" download="Mohammad-Noor.vcf" class="share-sheet__vcard">
+        Save contact card (.vcf) ↓
+      </a>
+    </div>
+  </dialog>
+
+  <!-- Live Toast Feedback -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="/redirect.js"></script>
+  <script src="/app.js"></script>
 </body>
 </html>
